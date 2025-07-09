@@ -16,10 +16,10 @@ const About = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-4xl font-bold text-gray-800 mb-6">
-                About SiliconTech
+                About MivaTech Solutions
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                With over a decade of experience in the technology industry, SiliconTech has been 
+                With over a decade of experience in the technology industry, MivaTech Solutions has been 
                 at the forefront of digital innovation, helping businesses transform and grow through 
                 cutting-edge technology solutions.
               </p>
@@ -60,9 +60,9 @@ const About = () => {
               alt="Our Team"
               className="rounded-2xl shadow-2xl"
             />
-            <div className="absolute -bottom-8 -right-8 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-6 text-white">
+            <div className="absolute -bottom-8 -right-8 bg-[#00345B] rounded-2xl p-6 text-white">
               <div className="text-3xl font-bold">10+</div>
-              <div className="text-blue-200">Years of Excellence</div>
+              <div className="text-[#b3cbe1]">Years of Excellence</div>
             </div>
           </div>
         </div>
@@ -70,10 +70,10 @@ const About = () => {
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="text-center group">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-[#00345B] rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <stat.icon className="h-8 w-8 text-white" />
               </div>
-              <div className="text-3xl font-bold text-gray-800 mb-2">{stat.number}</div>
+              <div className="text-3xl font-bold text-[#00345B] mb-2">{stat.number}</div>
               <div className="text-gray-600">{stat.label}</div>
             </div>
           ))}

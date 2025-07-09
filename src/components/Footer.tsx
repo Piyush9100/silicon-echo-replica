@@ -11,7 +11,7 @@ const Footer = () => {
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">S</span>
               </div>
-              <span className="text-2xl font-bold">SiliconTech</span>
+              <span className="text-2xl font-bold">MivaTech Solutions</span>
             </div>
             <p className="text-gray-300 leading-relaxed">
               Leading technology solutions provider, empowering businesses with innovative 
@@ -62,15 +62,15 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300">123 Tech Street, Silicon Valley, CA 94000</span>
+                <span className="text-gray-300">10 Brentfield Close, NW10 0QJ, London, England (UK)</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
+                <span className="text-gray-300">+44 7752 490144</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300">info@silicontech.com</span>
+                <span className="text-gray-300">info@mivatechsolutios.com</span>
               </div>
             </div>
           </div>
@@ -81,7 +81,7 @@ const Footer = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 text-sm">
-              © 2024 SiliconTech. All rights reserved.
+              © 2024 MivaTech Solutions. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-300 hover:text-white text-sm transition-colors">Terms of Service</a>

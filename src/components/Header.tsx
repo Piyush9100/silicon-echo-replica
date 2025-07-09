@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       {/* Top bar */}
-      <div className="bg-blue-900 text-white py-2">
+      <div className="bg-primary text-primary-foreground py-2">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
@@ -30,21 +30,24 @@ const Header = () => {
       {/* Main navigation */}
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">S</span>
-            </div>
-            <span className="text-2xl font-bold text-gray-800">SiliconTech</span>
+          <div className="flex items-center">
+            <img
+              src="https://mivatechsolutions.com/wp-content/uploads/2025/04/cropped-ChatGPT_Image_Apr_4__2025__06_10_33_PM-removebg-preview.png"
+              alt="Mivatech Solutions Logo"
+              width={250}
+              height={85}
+              className="object-contain rounded-lg bg-white"
+            />
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
-            <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">About</a>
-            <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</a>
-            <a href="#portfolio" className="text-gray-700 hover:text-blue-600 transition-colors">Portfolio</a>
-            <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
-            <Button className="bg-blue-600 hover:bg-blue-700">Get Quote</Button>
+            <a href="#home" className="text-primary hover:text-primary/80 transition-colors">Home</a>
+            <a href="#about" className="text-primary hover:text-primary/80 transition-colors">About</a>
+            <a href="#services" className="text-primary hover:text-primary/80 transition-colors">Services</a>
+            <a href="#portfolio" className="text-primary hover:text-primary/80 transition-colors">Portfolio</a>
+            <a href="#contact" className="text-primary hover:text-primary/80 transition-colors">Contact</a>
+            <Button className="bg-primary hover:bg-primary/80">Get Quote</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -60,12 +63,12 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 py-4 border-t">
             <div className="flex flex-col space-y-4">
-              <a href="#home" className="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
-              <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">About</a>
-              <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</a>
-              <a href="#portfolio" className="text-gray-700 hover:text-blue-600 transition-colors">Portfolio</a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
-              <Button className="bg-blue-600 hover:bg-blue-700 w-fit">Get Quote</Button>
+              <a href="#home" className="text-primary hover:text-primary/80 transition-colors">Home</a>
+              <a href="#about" className="text-primary hover:text-primary/80 transition-colors">About</a>
+              <a href="#services" className="text-primary hover:text-primary/80 transition-colors">Services</a>
+              <a href="#portfolio" className="text-primary hover:text-primary/80 transition-colors">Portfolio</a>
+              <a href="#contact" className="text-primary hover:text-primary/80 transition-colors">Contact</a>
+              <Button className="bg-primary hover:bg-primary/80 w-fit">Get Quote</Button>
             </div>
           </div>
         )}

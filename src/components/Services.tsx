@@ -57,10 +57,10 @@ const Services = () => {
           {services.map((service, index) => (
             <Card key={index} className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg">
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-[#00345B] rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <service.icon className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">
+                <CardTitle className="text-xl font-bold text-[#00345B] group-hover:text-[#00345B] transition-colors">
                   {service.title}
                 </CardTitle>
               </CardHeader>
@@ -71,7 +71,7 @@ const Services = () => {
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="text-sm text-gray-500 flex items-center justify-center">
-                      <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
+                      <span className="w-2 h-2 bg-[#00345B] rounded-full mr-2"></span>
                       {feature}
                     </li>
                   ))}
