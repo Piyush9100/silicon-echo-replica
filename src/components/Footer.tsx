@@ -8,9 +8,13 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-6">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">S</span>
-              </div>
+              <img
+                src="https://mivatechsolutions.com/wp-content/uploads/2025/04/cropped-ChatGPT-Image-Apr-4-2025-06_42_43-PM-192x192.png"
+                alt="MivaTech Solutions Logo"
+                width={40}
+                height={40}
+                className="rounded-lg bg-white object-contain"
+              />
               <span className="text-2xl font-bold">MivaTech Solutions</span>
             </div>
             <p className="text-gray-300 leading-relaxed">

@@ -1,10 +1,16 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      document.documentElement.style.scrollBehavior = "smooth";
+    }
+  }, []);
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
@@ -14,11 +20,11 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
               <Phone className="h-4 w-4" />
-              <span>+1 (555) 123-4567</span>
+              <span>+44 7752 490144</span>
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="h-4 w-4" />
-              <span>info@silicontech.com</span>
+              <span>info@mivatechsolutions.com</span>
             </div>
           </div>
           <div className="hidden md:block">
@@ -46,6 +52,7 @@ const Header = () => {
             <a href="#about" className="text-primary hover:text-primary/80 transition-colors">About</a>
             <a href="#services" className="text-primary hover:text-primary/80 transition-colors">Services</a>
             <a href="#portfolio" className="text-primary hover:text-primary/80 transition-colors">Portfolio</a>
+            <a href="#testimonials" className="text-primary hover:text-primary/80 transition-colors">Testimonials</a>
             <a href="#contact" className="text-primary hover:text-primary/80 transition-colors">Contact</a>
             <Button className="bg-primary hover:bg-primary/80">Get Quote</Button>
           </div>
@@ -67,6 +74,7 @@ const Header = () => {
               <a href="#about" className="text-primary hover:text-primary/80 transition-colors">About</a>
               <a href="#services" className="text-primary hover:text-primary/80 transition-colors">Services</a>
               <a href="#portfolio" className="text-primary hover:text-primary/80 transition-colors">Portfolio</a>
+              <a href="#testimonials" className="text-primary hover:text-primary/80 transition-colors">Testimonials</a>
               <a href="#contact" className="text-primary hover:text-primary/80 transition-colors">Contact</a>
               <Button className="bg-primary hover:bg-primary/80 w-fit">Get Quote</Button>
             </div>
