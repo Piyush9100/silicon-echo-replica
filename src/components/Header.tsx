@@ -3,13 +3,40 @@ import { useState, useEffect } from "react";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const NAV_LINKS = [
+  { href: "#home", label: "Home" },
+  { href: "#services", label: "Services" },
+  { href: "#about", label: "About" },
+  { href: "#portfolio", label: "Portfolio" },
+  { href: "#testimonials", label: "Testimonials" },
+  { href: "#contact", label: "Contact" },
+];
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("#home");
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       document.documentElement.style.scrollBehavior = "smooth";
     }
+    const handleScroll = () => {
+      const threshold = 120;
+      let current = NAV_LINKS[0].href;
+      for (const link of NAV_LINKS) {
+        const el = document.querySelector(link.href);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top - threshold <= 0 && rect.bottom > threshold) {
+            current = link.href;
+          }
+        }
+      }
+      setActiveSection(current);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -48,12 +75,15 @@ const Header = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-primary hover:text-primary/80 transition-colors">Home</a>
-            <a href="#about" className="text-primary hover:text-primary/80 transition-colors">About</a>
-            <a href="#services" className="text-primary hover:text-primary/80 transition-colors">Services</a>
-            <a href="#portfolio" className="text-primary hover:text-primary/80 transition-colors">Portfolio</a>
-            <a href="#testimonials" className="text-primary hover:text-primary/80 transition-colors">Testimonials</a>
-            <a href="#contact" className="text-primary hover:text-primary/80 transition-colors">Contact</a>
+            {NAV_LINKS.map(link => (
+              <a
+                key={link.href}
+                href={link.href}
+                className={`transition-colors text-primary hover:text-primary/80 ${activeSection === link.href ? 'font-bold text-[#00345B]' : ''}`}
+              >
+                {link.label}
+              </a>
+            ))}
             <Button className="bg-primary hover:bg-primary/80">Get Quote</Button>
           </div>
 
@@ -70,12 +100,15 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 py-4 border-t">
             <div className="flex flex-col space-y-4">
-              <a href="#home" className="text-primary hover:text-primary/80 transition-colors">Home</a>
-              <a href="#about" className="text-primary hover:text-primary/80 transition-colors">About</a>
-              <a href="#services" className="text-primary hover:text-primary/80 transition-colors">Services</a>
-              <a href="#portfolio" className="text-primary hover:text-primary/80 transition-colors">Portfolio</a>
-              <a href="#testimonials" className="text-primary hover:text-primary/80 transition-colors">Testimonials</a>
-              <a href="#contact" className="text-primary hover:text-primary/80 transition-colors">Contact</a>
+              {NAV_LINKS.map(link => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={`transition-colors text-primary hover:text-primary/80 ${activeSection === link.href ? 'font-bold underline text-[#00345B]' : ''}`}
+                >
+                  {link.label}
+                </a>
+              ))}
               <Button className="bg-primary hover:bg-primary/80 w-fit">Get Quote</Button>
             </div>
           </div>

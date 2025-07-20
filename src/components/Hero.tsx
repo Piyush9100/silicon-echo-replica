@@ -29,27 +29,30 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 transition-all duration-300 transform hover:scale-105">
+              <Button
+                size="lg"
+                className="bg-white text-blue-900 hover:bg-blue-50 transition-all duration-300 transform hover:scale-105"
+                onClick={() => {
+                  const el = document.getElementById('contact');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300">
-                <Play className="mr-2 h-5 w-5" />
-                Watch Demo
               </Button>
             </div>
 
             <div className="grid grid-cols-3 gap-8 pt-8 border-t border-blue-700">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400">500+</div>
+                <div className="text-3xl font-bold text-blue-400">150+</div>
                 <div className="text-blue-200">Projects Completed</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400">150+</div>
+                <div className="text-3xl font-bold text-blue-400">50+</div>
                 <div className="text-blue-200">Happy Clients</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400">10+</div>
+                <div className="text-3xl font-bold text-blue-400">4+</div>
                 <div className="text-blue-200">Years Experience</div>
               </div>
             </div>
